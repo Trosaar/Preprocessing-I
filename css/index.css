@@ -136,25 +136,24 @@ body {
   font-size: 62.5%;
 }
 h5 {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
 }
 h4 {
-  font-size: 2.1rem;
-}
-h3 {
   font-size: 2.4rem;
 }
+h3 {
+  font-size: 2.9rem;
+}
 h2 {
-  font-size: 2.7rem;
+  font-size: 3.4rem;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 3.9rem;
 }
 h1,
 h2,
 h3,
-h4,
-h5 {
+h4 {
   text-align: center;
 }
 .navButton {
@@ -171,7 +170,7 @@ body {
   flex-direction: row;
   background-color: #455C4F;
   padding: 0 1%;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 body header {
   display: flex;
@@ -189,17 +188,25 @@ body header nav {
   flex-wrap: wrap;
   padding: 1%;
 }
-body header h3 {
+body header h4 {
   border-top: black dotted 1px;
   padding-top: 2.5%;
 }
-body div.content {
+body header h5 {
+  padding: 1%;
+}
+body .content {
   width: 74%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   border-radius: 20px;
   padding: 1%;
   border: 1px solid black;
-  background-color: #59484F;
-  margin: 1% 1% 1% 0;
+  background-color: #EDB579;
+  margin: 1% 0 1% 1%;
+}
+body .content section {
+  border: 1px dotted black;
+  border-radius: 10px;
 }
