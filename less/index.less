@@ -1,5 +1,5 @@
 // Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -25,7 +25,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -55,5 +55,90 @@ table {
 
 html, body {
     height: 100%;
+		font-size: 62.5%;
 }
 
+// Variables
+	// Colors
+	@Lynch: #6D7696;
+	@DonJuan: #59484F;
+	@Nandor: #455C4F;
+	@Mojo: #CC5543;
+	@Tacao: #EDB579;
+	@FallGreen: #DBE6AF;
+
+// mixins
+	.flexColumn() {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.topBorder() {
+		border-top: black dotted 1px;
+		padding-top: 2.5%;
+	}
+
+ .mainSection() {
+	 border-radius: 20px;
+	 padding: 1%;
+	 border: 1px solid black;
+ }
+// Code!
+
+h5 {font-size: 1.8rem;}
+h4 {font-size: 2.1rem;}
+h3 {font-size: 2.4rem;}
+h2 {font-size: 2.7rem;}
+h1 {font-size: 3rem;}
+
+h1, h2, h3, h4, h5 {
+	text-align: center;
+}
+
+.navButton {
+	border: 1px solid black;
+	border-radius: 5px;
+	margin: 1% auto;
+	padding: 2%;
+	text-decoration: none;
+	background-color: @FallGreen;
+	color: black;
+}
+
+body {
+	display: flex;
+	flex-direction: row;
+	background-color: @Nandor;
+	padding: 0 1%;
+	font-size: 1.5rem;
+
+	header {
+		.flexColumn;
+		.mainSection;
+		width: 25%;
+		background-color: @Lynch;
+		margin: 1% 1% 1% 0;
+
+		nav {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			padding: 1%;
+		}
+
+		h3 {
+			.topBorder;
+		}
+
+		footer {
+		}
+	}
+
+	div.content {
+		width: 74%;
+		.flexColumn;
+		.mainSection;
+		background-color: @DonJuan;
+		margin: 1% 1% 1% 0;
+	}
+}
